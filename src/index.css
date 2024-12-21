@@ -1,0 +1,253 @@
+:root {
+  --color-1: #c470c7;
+  --color-2: #f5e1e4;
+  --color-3: #FDC1C4;
+  --color-4: #A9D1E6;
+  --color-5: #c9dceb;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive;
+  background-color: #dcd2d8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--color-2) 0%, var(--color-4) 100%);
+}
+
+.App {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  transition: all 0.3s ease;
+}
+
+.App:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  color: var(--color-1);
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filters select {
+  background-color: var(--color-2);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--color-1);
+  font-family: 'Comic Sans MS', cursive;
+  transition: all 0.3s ease;
+}
+
+.filters select:hover {
+  background-color: var(--color-1);
+  transform: scale(1.05);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+input[type="text"], 
+input[type="date"], 
+input[type="password"],
+select {
+  padding: 12px;
+  border: 2px solid var(--color-3);
+  border-radius: 15px;
+  font-family: 'Comic Sans MS', cursive;
+  background-color: var(--color-5);
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, 
+input[type="date"]:focus, 
+input[type="password"]:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-3);
+  box-shadow: 0 0 10px rgba(130, 111, 142, 0.2);
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--color-1);
+  color: rgb(255, 255, 255);
+  font-family: 'Comic Sans MS', cursive;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-3);
+  transform: scale(1.05);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-2);
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.todo-item.low {
+  border-left: 5px solid green;
+}
+
+.todo-item.medium {
+  border-left: 5px solid orange;
+}
+
+.todo-item.high {
+  border-left: 5px solid red;
+}
+
+.todo-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-content input[type="checkbox"] {
+  accent-color: var(--color-1);
+}
+
+.category-tag {
+  background-color: var(--color-1);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 0.8em;
+  margin-left: 10px;
+}
+
+.due-date {
+  color: var(--color-1);
+  font-size: 0.8em;
+  margin-left: 10px;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.todo-actions button {
+  background-color: transparent;
+  color: var(--color-1);
+  border: 2px solid var(--color-1);
+  padding: 8px 15px;
+  font-size: 0.9em;
+}
+
+.todo-actions button:hover {
+  background-color: var(--color-4);
+  color: white;
+}
+
+/* Styles for Login and Register forms */
+form.login-form, form.register-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+form.login-form:hover, form.register-form:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+form.login-form input, form.register-form input {
+  padding: 12px;
+  border: 2px solid var(--color-3);
+  border-radius: 15px;
+  font-family: 'Comic Sans MS', cursive;
+  background-color: var(--color-5);
+  transition: all 0.3s ease;
+}
+
+form.login-form input:focus, form.register-form input:focus {
+  outline: none;
+  border-color: var(--color-3);
+  box-shadow: 0 0 10px rgba(130, 111, 142, 0.2);
+}
+
+form.login-form button, form.register-form button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--color-1);
+  color: rgb(255, 255, 255);
+  font-family: 'Comic Sans MS', cursive;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form.login-form button:hover, form.register-form button:hover {
+  background-color: var(--color-3);
+  transform: scale(1.05);
+}
+
+.form-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.form-links a {
+  color: var(--color-1);
+  text-decoration: none;
+  font-family: 'Comic Sans MS', cursive;
+  transition: all 0.3s ease;
+}
+
+.form-links a:hover {
+  color: var(--color-3);
+}
