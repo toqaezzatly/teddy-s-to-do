@@ -20,15 +20,12 @@ const todoSchema = new mongoose.Schema({
     enum: ['work', 'personal', 'shopping', 'other'],
     default: 'other'
   },
-  dueDate: {
-    type: Date,
-    default: null
-  },
   createdAt: { 
     type: Date, 
     default: Date.now 
-  },
-  tags: [String]
+  }
 });
 
-export default mongoose.model('Todo', todoSchema);
+const ToDo = mongoose.model('ToDo', todoSchema);
+
+export default ToDo;
